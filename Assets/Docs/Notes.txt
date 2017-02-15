@@ -1,0 +1,3 @@
+To simulate physics, have a different set of items for each limb that has references to the bones.
+
+Each fixed update the item attempts to move to the current bone position.
