@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoneToPhysics : MonoBehaviour
+public class BonePhysics : MonoBehaviour
 {
-    public GameObject bone;
     Rigidbody2D body;
     Vector3 lastPosition;
     float lastRotation;
@@ -13,7 +12,7 @@ public class BoneToPhysics : MonoBehaviour
     {
         get
         {
-            return this.bone.transform.position;
+            return this.transform.position;
         }
     }
 
@@ -21,26 +20,24 @@ public class BoneToPhysics : MonoBehaviour
     {
         get
         {
-            return this.bone.transform.rotation.eulerAngles.z;
+            return this.transform.rotation.eulerAngles.z;
         }
     }
     // Use this for initialization
-    void Start ()
+    void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        SetRotationToBone();
         MoveBodyToBone();
     }
 
     private void Update()
     {
-        SetRotationToBone();
     }
 
-	// Update is called once per frame
-	void FixedUpdate ()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        
+
         MoveBodyToBone();
     }
 
@@ -50,8 +47,8 @@ public class BoneToPhysics : MonoBehaviour
         this.body.MoveRotation(BoneRotation);
     }
 
-    void SetRotationToBone()
-    {
-        this.transform.localRotation = bone.transform.localRotation;
-    }
+    //void SetRotationToBone()
+    //{
+    //    this.transform.localRotation = bone.transform.localRotation;
+    //}
 }
