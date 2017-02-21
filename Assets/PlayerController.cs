@@ -21,11 +21,10 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         var translation = Input.GetAxisRaw("Horizontal") * speed;
-        var kick = Input.GetButtonDown("Fire1");
+        var kick = Input.GetButton("Fire1");
         var isKicking = animator.GetCurrentAnimatorStateInfo(0).IsName("Kick");
 
-        if (!isKicking || animator.IsInTransition(0)) animator.SetBool("Kick", kick);
-        else animator.SetBool("Kick", false);
+        animator.SetBool("Kick", kick);
 
         this.transform.position += new Vector3(translation, 0, 0) * Time.deltaTime;
     }
