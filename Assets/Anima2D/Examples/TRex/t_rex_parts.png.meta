@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 726d2784a87b044f182b7487b3b8ebb8
-timeCreated: 1452721170
+timeCreated: 1491272575
 licenseType: Store
 TextureImporter:
   fileIDToRecycleName:
@@ -133,6 +133,6 @@ TextureImporter:
       tessellationDetail: -1
     outline: []
   spritePackingTag: trex
-  userData: 97230489649152
+  userData: 97732039031345
   assetBundleName: 
   assetBundleVariant: 
